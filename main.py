@@ -30,27 +30,6 @@ def drawPoli(poligono, clr=None):
         rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
 
 
-def fillPoli(poligono, clr=None):
-    # rasterizar el poligono y llenar con lineas
-    for i in range(len(poligono)):
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-        rend.glLine(poligono[i], poligono[(i + 1) % len(poligono)], clr)
-
-
 pol1 = [
     V2(165, 380),
     V2(185, 360),
@@ -110,12 +89,5 @@ drawPoli(pol2, color(0, 1, 0))
 drawPoli(pol3, color(0, 0, 1))
 drawPoli(pol4, color(1, 1, 0))
 drawPoli(pol5, color(1, 1, 0))
-
-# Funcion para llenar los poligonos con lineas
-fillPoli(pol1, color(1, 0, 0))
-fillPoli(pol2, color(0, 1, 0))
-fillPoli(pol3, color(0, 0, 1))
-fillPoli(pol4, color(1, 1, 0))
-fillPoli(pol5, color(1, 1, 0))
 
 rend.glFinish("output.bmp")
